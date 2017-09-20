@@ -12,6 +12,7 @@ cols <- c(3:ncol(selected))
 selected[cols] <- sapply(selected[cols], as.numeric)
 
 #draw "plot3.png"
+selected$Datetime <- strptime(paste(selected$Date, selected$Time, sep = " "), "%Y-%m-%d %H:%M:%S")
 png("plot3.png")
 with(selected, plot(Datetime, Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering"))
 with(selected, lines(Datetime, Sub_metering_2, col = "red"))

@@ -12,6 +12,8 @@ cols <- c(3:ncol(selected))
 selected[cols] <- sapply(selected[cols], as.numeric)
 
 #draw "plot4.png"
+selected$Datetime <- strptime(paste(selected$Date, selected$Time, sep = " "), "%Y-%m-%d %H:%M:%S")
+
 png("plot4.png")
 par(mfrow = c(2,2))
 
