@@ -24,7 +24,7 @@ with(selected, plot(Datetime, Voltage, type = "l", xlab = "datetime", ylab = "Vo
 with(selected, plot(Datetime, Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering"))
 with(selected, lines(Datetime, Sub_metering_2, col = "red"))
 with(selected, lines(Datetime, Sub_metering_3, col = "blue"))
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty = 1)
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty = 1, bty = "n")
 
 with(selected, plot(Datetime, Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global Reactive Power"))
 
